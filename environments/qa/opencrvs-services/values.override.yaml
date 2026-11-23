@@ -2,3 +2,13 @@
 # Use this file to customize helm chart behavior
 # Please make sure your custom changes doesn't conflict with values.yaml
 ##################################################################################
+countryconfig:
+  env:
+    VERIFIABLE_CREDENTIALS_RAW_JWT_SIGN_URL: "http://countryconfig:3040/certify-issuer/raw/jwt/sign"
+    CERTIFY_BASE_URL: "https://certify.example.org/v1/certify"
+    CERTIFY_AUDIENCE: "https://certify.example.org/v1/certify"
+    CERTIFY_PAPER_CONFIG_ID: "crvs_birth_paper_v1"
+    CERTIFY_PAPER_FORMAT: "jwt_vc_json"
+    CERTIFY_PAPER_CREDENTIAL_TYPES: "VerifiableCredential,FarajalandBirthPaper"
+    CERTIFY_OFFER_EXPIRES_IN: "600"
+    CERTIFY_HTTP_TIMEOUT_MS: "8000"
