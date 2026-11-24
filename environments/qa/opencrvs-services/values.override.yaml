@@ -2,13 +2,20 @@
 # Use this file to customize helm chart behavior
 # Please make sure your custom changes doesn't conflict with values.yaml
 ##################################################################################
+# Merge into your Helm values for the opencrvs-services release.
 countryconfig:
   env:
     VERIFIABLE_CREDENTIALS_RAW_JWT_SIGN_URL: "http://countryconfig:3040/certify-issuer/raw/jwt/sign"
-    CERTIFY_BASE_URL: "https://injicertify.technodemo.idencode.link/v1/certify"
-    CERTIFY_AUDIENCE: "https://injicertify.technodemo.idencode.link"
-    CERTIFY_PAPER_CONFIG_ID: "crvs_birth_paper_v1"
-    CERTIFY_PAPER_FORMAT: "jwt_vc_json"
-    CERTIFY_PAPER_CREDENTIAL_TYPES: "VerifiableCredential,FarajalandBirthPaper"
+
+    # Your REAL Certify. If you reuse the instance from your crop example, its did:web host
+    # suggests  https://inji-certify-g2p.demo.idencode.link/v1/certify  (verify this).
+    CERTIFY_BASE_URL: "https://injicertify-crvs.demo.idencode.link/v1/certify"
+    CERTIFY_AUDIENCE: "https://injicertify-crvs.demo.idencode.link"   # same value as certify_audience in OpenG2P
+
+    CERTIFY_PAPER_CONFIG_ID: "CrvsBirthPaperCredential"   # credential_config_key_id from the SQL
+    CERTIFY_PAPER_FORMAT: "ldp_vc"
+    CERTIFY_PAPER_CONTEXT: "https://www.w3.org/2018/credentials/v1"
+    CERTIFY_PAPER_QR_CLAIM_PATH: "claim169.qrCode"
+    CERTIFY_PAPER_CREDENTIAL_TYPES: "VerifiableCredential,CrvsBirthCredential"
     CERTIFY_OFFER_EXPIRES_IN: "600"
-    CERTIFY_HTTP_TIMEOUT_MS: "8000"
+    CERTIFY_HTTP_TIMEOUT_MS: "8000"   # keep below the 10000 ms print form timeout
