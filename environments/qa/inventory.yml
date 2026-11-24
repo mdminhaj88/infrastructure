@@ -51,6 +51,11 @@ all:
           - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDIqrgegBAJdWBsYS9k+7KyJISl9gXjYEdXqmef/FrGwLalcwZ18/LmvjD8s/qE6Aw7atWnjhamUISYNjSbgUTdR7w1k1Pc8b3+bkRMsYCpB23jK3NPuq6diQ/ieGyvNLL/umNtdCZffx47lpgIetSK2TvhgjHNKQGy0C1qUjxEIsHrSx5Xlsh8v12BvpkBeF3+wVESc5CodtD6oCaj/N2kHjgLvjjURK202FLF4NIjByG7ZYmr4/zZiTiKiTsA4On8BiWJTTxCBG1kTSEC3BmTIi139O/Z9zq/Ub61RAxCLU/SOS+SFAjFwBuK5/2q7mETZxFqGlcwRJcuiV8bMsmPSi+cr4fTLWMYd7R4q5pf9ZSwRpSRJPIF47VO+Tf2/DEHFJewPgL15pcD7Fpu7KZVKmM80A8u/UiPmiwvMevIbVvqpoPFDzIgeD9rOWk1feAMz7NQLaHJROsBF0NcQOzUIBGR3hm1izGgYQ2zq/O7+FgPwV9/OehwWjZypvv/6V8= minhaj@TECHNO-500
         state: present
         role: admin
+      - name: dharani
+        ssh_keys:
+          - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCq63XRGrVO7PjPnLj8/ATDIyaHqcjuRdeJNRgfBC9vd9xfVI9zWY+f/RRuysFYamI4O6wj46+EQdeTeWqkLigjym1RW9jpTjiKGJ/h3WNDVa9LE5anidz5exrX8oeETXQ4vyi7ld8kKP9GKiapCK0wyjcuOVa+tQ3w9L6HzZ5E2eAICIIrHq2DqN2CfjkGtg0QASZR6BeqDGEtiJXOv4YFoXSE9g9vssu7GEQC2kk64AMbMvIGgjV4Iq8Ma3KzWGaJuZEHsSd0qHnAxuAOx8mY7G7Yf9K6WhPPs6awsqiaoyWoDEPWjXQrlg+iGwRz1IneA+eA6KtRw5qiD4krk9o0ePOkZckN7CdARtXMXhWcngR2p8gBz10TNGUy5dF2Ay97mKyLw1w2qNCHhz97uGctQ72ajAQEYD5VbpWkC9M9oO1Mk/GRyKf7oRG823K8ZmfOi72MLrPXlPC2cjGB0cCiyoLH5HMoW5EaLPfLrvtBALjvouFV41cRNdAWYjY4Vvk= dharani@TECHNO-563
+        state: present
+        role: admin
 
   children:
     master:
