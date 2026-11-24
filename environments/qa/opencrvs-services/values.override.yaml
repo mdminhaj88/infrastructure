@@ -5,8 +5,8 @@
 countryconfig:
   env:
     VERIFIABLE_CREDENTIALS_RAW_JWT_SIGN_URL: "http://countryconfig:3040/certify-issuer/raw/jwt/sign"
-    CERTIFY_BASE_URL: "https://injicertify-g2p.technodemo.idencode.link/v1/certify"
-    CERTIFY_AUDIENCE: "https://injicertify-g2p.technodemo.idencode.link"
+    CERTIFY_BASE_URL: "https://injicertify.technodemo.idencode.link/v1/certify"
+    CERTIFY_AUDIENCE: "https://injicertify.technodemo.idencode.link"
     CERTIFY_PAPER_CONFIG_ID: "crvs_birth_paper_v1"
     CERTIFY_PAPER_FORMAT: "jwt_vc_json"
     CERTIFY_PAPER_CREDENTIAL_TYPES: "VerifiableCredential,FarajalandBirthPaper"
